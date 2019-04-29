@@ -5,7 +5,7 @@ namespace UFW_NFO
 {
     public class Archiver
     {
-        public static void ArchiveFile(NSPModel item)
+        public static void ArchiveFile(NSPModel item, string dir)
         {
             DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo($"./out/{item.Name + item.Version}");
             FileInfo[] filesInDir = hdDirectoryInWhichToSearch.GetFiles("*" + item.Name + "*.*");

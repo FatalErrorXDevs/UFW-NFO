@@ -8,7 +8,7 @@ namespace UFW_NFO
         public static void RemoveHeadersWithSquirrel(NSPModel itemToProcess)
         {
             ProcessStartInfo start = new ProcessStartInfo();
-            var outDir = "\"" + "./out" + itemToProcess.Name + itemToProcess.Version + "\"";
+            var outDir = "\"" + itemToProcess.Name + itemToProcess.Version + "\"";
             var path = "\"" + itemToProcess.Path + "\"";
             var arguments = $"-o ./{outDir} --erase_deltas {path}";
             Process p = new Process();
